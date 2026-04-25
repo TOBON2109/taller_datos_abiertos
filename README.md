@@ -4,7 +4,7 @@ Aplicación Flutter que consume la [API Colombia](https://api-colombia.com/) par
 
 ---
 
-## 📡 API Utilizada
+## API Utilizada
 
 **Base URL:** `https://api-colombia.com/api/v1`  
 **Documentación:** [Swagger](https://api-colombia.com/swagger/index.html)  
@@ -28,7 +28,8 @@ No requiere autenticación.
 
 ---
 
-## 🏗️ Arquitectura y Estructuralib/
+## Arquitectura y Estructura
+lib/
 ├── config/
 │   └── app_config.dart         # Lee la URL base desde .env
 ├── models/
@@ -70,7 +71,7 @@ No requiere autenticación.
 
 ---
 
-## 📦 Paquetes utilizados
+## Paquetes utilizados
 
 | Paquete | Versión | Uso |
 |---------|---------|-----|
@@ -80,7 +81,7 @@ No requiere autenticación.
 
 ---
 
-## 🗺️ Rutas implementadas con go_router
+## Rutas implementadas con go_router
 
 | Nombre | Path | Descripción |
 |--------|------|-------------|
@@ -101,7 +102,7 @@ Los parámetros se pasan en el path como `:id` y se reciben en el widget con `st
 
 ---
 
-## 🔄 Manejo de estados
+## Manejo de estados
 
 Cada vista implementa tres estados usando `FutureBuilder`:
 
@@ -111,41 +112,46 @@ Cada vista implementa tres estados usando `FutureBuilder`:
 
 ---
 
-## 📋 Ejemplo de respuesta JSON
+## Ejemplo de respuesta JSON
 
 **Endpoint:** `GET /api/v1/Department/2`
 
-```json{
-"id": 2,
-"name": "Antioquia",
-"description": "Antioquia es uno de los treinta y dos departamentos...",
-"surface": 63612,
-"population": 6887306,
-"phonePrefix": 4,
-"cityCapital": {
-"id": 12,
-"name": "Medellín"
+```json
+{
+  "id": 2,
+  "name": "Antioquia",
+  "description": "Antioquia es uno de los treinta y dos departamentos...",
+  "surface": 63612,
+  "population": 6887306,
+  "phonePrefix": 4,
+  "cityCapital": {
+    "id": 12,
+    "name": "Medellín"
+  }
 }
-}
+```
 
 **Endpoint:** `GET /api/v1/Holiday/year/2025`
 
-```json[
-{
-"date": "2025-01-01",
-"name": "Año Nuevo",
-"type": "Fijo"
-},
-{
-"date": "2025-01-06",
-"name": "Reyes Magos",
-"type": "Puente"
-}
+```json
+[
+  {
+    "date": "2025-01-01",
+    "name": "Año Nuevo",
+    "type": "Fijo"
+  },
+  {
+    "date": "2025-01-06",
+    "name": "Reyes Magos",
+    "type": "Puente"
+  }
 ]
+```
 
 ---
 
-## 🌿 Flujo GitFlowmain
+## Flujo GitFlow
+main
 └── dev
 └── feature/taller_api_colombia  ← desarrollo aquí
 
@@ -156,11 +162,13 @@ Cada vista implementa tres estados usando `FutureBuilder`:
 
 ---
 
-## ▶️ Cómo ejecutar
+## Cómo ejecutar
 
-```bashgit clone https://github.com/TU_USUARIO/taller_datos_abiertos.git
+```bash
+git clone https://github.com/TOBON2109/taller_datos_abiertos.git
 cd taller_datos_abiertos
 flutter pub get
 flutter run
+```
 
-> Requiere Flutter 3.x o superior. No necesita API Key.
+Requiere Flutter 3.x o superior. No necesita API Key.
